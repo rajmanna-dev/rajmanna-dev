@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Raj Manna</title>
+    <link rel="shortcut icon" href="/assets/siteLogo-ByBT-rzm.png" type="image/x-icon" />
+    <link rel="stylesheet" crossorigin href="/assets/index-BFQMyduO.css">
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav
+      class="navbar fixed px-44 top-0 left-0 right-0 flex justify-between h-28 items-center z-10 max-md:px-5 max-md:h-20"
+    >
+      <div class="siteLogo">
+        <a href="/" class="flex items-center">
+          <img
+            src="/assets/siteLogo-ByBT-rzm.png"
+            width="38"
+            alt="Main logo of my portfolio website"
+            class="mr-3"
+          />
+          <p class="myName text-[#e8e8e8] font-extrabold text-4xl">RM.</p>
+        </a>
+      </div>
+      <div class="siteMenus max-md:hidden">
+        <ul class="menuList flex justify-between w-[380px]">
+          <li class="menu text-[1.65rem] activeMenu">
+            <a href="#home">Home</a>
+          </li>
+          <li class="menu text-[1.65rem]">
+            <a href="#services">Services & Skills</a>
+          </li>
+          <li class="menu text-[1.65rem]">
+            <a href="#portfolio">Portfolio</a>
+          </li>
+          <li class="menu text-[1.65rem]">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- SIDEBAR -->
+    <section
+      class="sideBar fixed right-0 top-0 bottom-0 w-28 z-40 max-md:hidden"
+    >
+      <div
+        class="sideBarContent flex flex-col items-center justify-center h-[100%]"
+      >
+        <div
+          class="followText text-[#e8e8e8] flex items-center rotate-90 w-64 mb-10"
+        >
+          <p class="text-xl font-semibold mr-3">FOLLOW ME ON</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-move-right"
+            id="downArrow"
+          >
+            <path d="M18 8L22 12L18 16" />
+            <path d="M2 12H22" />
+          </svg>
+        </div>
+        <div class="socialMedia mt-6">
+          <ul class="socialMediaList">
+            <li class="social">
+              <a href="https://www.instagram.com/rishirajm_dev/"
+                ><img
+                  src="data:image/png;base64,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"
+                  alt="instagram"
+                  width="32"
+                  class="mt-3"
+              /></a>
+            </li>
+            <li class="social">
+              <a href="https://www.facebook.com/rishirajm.dev"
+                ><img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABUElEQVR4nO2ZzUrDQBDH82S7Vby1JTsoPpAieFBv0qMP4UyEQq03L4KWWh/Am4eASXupYEeiWL9o6W5jdgPzgzku+f/2m00UCYIgBE3DYKwArxTgRANxFaUAJwqor+KkvVZ4beiwqtB6URk8cO557+HhU4Ja1gLFtAlI4NJewODYe3CYV24tEEBo/l4ioEvoxc2dhI86Q767TznLpzyb8Q+CHoGN7YSvb554GTpkgePOcGn44AUGo5RrLZCPX/4E3ju55a3di5Xaexd4/b1imd/XxartvQvYThktAvA/vb6I52wa3gjYMBil9RY47z7WW+D07CE8AdmFQEaAZAppOYlJdiGWbRTkNspyEuu6XSVUyU+L6wlgZi8A1C/7QudcBnv2AnHS9h4cPqoB2IxcKH4u+A6vgPadwn9JUKt4n6/yuV0V3zLYc+55QRCEqCreAAESa+zxbT1rAAAAAElFTkSuQmCC"
+                  alt="facebook"
+                  width="32"
+                  class="mt-3"
+              /></a>
+            </li>
+            <li class="social">
+              <a href="https://x.com/Rishirajm_dev"
+                ><img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADFklEQVR4nO1ZS0vjUBTOD5mBXJtWRFs3Yg10UVAXBd3YKl20C920iH9AsBTXbnzWhT9A+qCCoHRVsUW6bSmKdNOHC0E6pY74AB9nOGcmmaidcZrBJIscOIvc3LTfl3u+e74kHGeGGWaYYdiwWCxfeZ5P8Tz/nTEGWib/8z/3eJ7vVQ2eMfZNa+DsfbYQS9cE8M4bADz8yoQaApqXDftzOV13TUBv0OxNmgSYuQLMOCUkCAIUi0XoFIlE4p8Azc3NwdPTE2SzWfo9zTUwPj4O9/f38PLyAplMBg4ODqBcLhOJcDj812snJyfh9vaW5vf39+sn4mg0SoBXV1fp2OFwwMXFBbRaLXA6nR2vEUURLi8vKUVR1HcX6unpgaOjIyoFr9dLY9PT03Scy+XovHK+3W6H8/NzuLm5AY/HY4xtdGhoCJrNJtTrdRgYGKCx7e1tWplIJCLPs1qtkM/n4fHxEYLBoL4iZm8yFAoR4N3dXRlsqVSCu7s7GBsbo5VIJpM0Z2lpqWvwTItGJgGcn59/JXIU6traGp3b2tpSBZ5pQQB3k1qtRgIeHh6mseXlZXl73d/ff6cJZiQCmD6fjwR8fHxMYDFPTk5oqw0EAqrBMy29UCwWe1XrIyMjtCqNRkMWuaEJCIIAp6en8PDwQAJWijwejxufQF9fH5ydnVHZoIBtNltHkRuSgMViIVuB4NPpNAHe2NiQRV6tVl+JnBmNwM7ODoFeWVmRu/Tz8zP4/X46j91aKXJmJAKLi4sEHktFGlMKGG0Ejm1ubqpqaNxnEpidnaU7WygU5JqXUhKwREyy4tilR0dH9ScwMTFB1rhSqcDg4GDHOalUikgsLCzQsdvtlu201WrVjwCWCNriq6srcLlcH3bpdrstW2g0ehjr6+v6EMCmhNsl+p2pqakPAczMzFCZ4Urhw8/h4SE5U6UV14wA1jH6fdxhPnr6UqZks99GXWHFdRGxFsmZBJi5AqBpCfHGernbVqOBPb2Bs98ZV7MCvfhxwQDgm4IgfOH+4ytNAt/P61A213jnVYM3wwwzzOC0iB9GnyQ6otH+2wAAAABJRU5ErkJggg=="
+                  alt="twitter"
+                  width="32"
+                  class="mt-3"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME SECTION -->
+    <section
+      class="homePage px-44 h-[100vh] relative justify-center items-center flex font-normal max-md:px-5"
+      id="home"
+    >
+      <section
+        class="flex justify-between items-center max-md:flex-col-reverse"
+      >
+        <div class="introductionSection">
+          <p class="welcomeText text-2xl font-semibold text-[#8ecae6]">
+            Welcome to my portfolio!
+          </p>
+          <h1
+            class="mainIntroText font-bold text-[6rem] text-[#e8e8e8] leading-tight mt-4 max-md:text-[4rem]"
+          >
+            Hello, my<br />
+            name's <span class="text-[#8ecae6]">Raj</span>.
+          </h1>
+          <div class="text-2xl mt-7 w-1/2 max-md:w-full">
+            <p class="text-[#8d99ae]">
+              I'm a Fullstack Web Developer from Kolkata. Currently contributing
+              in
+              <a
+                class="text-[#e8e8e8] font-semibold hover:text-[#8ecae6]"
+                href="https://summerofcode.withgoogle.com/programs/2024"
+                target="_blank"
+              >
+                @GSoC 2024
+              </a>
+              as a Fullstack Developer.
+            </p>
+          </div>
+          <div
+            class="buttonGroup flex justify-between w-[350px] mt-20 text-[#e8e8e8] max-md:w-full max-md:mt-10"
+          >
+            <a
+              href="src/Resume-Raj-Manna.pdf"
+              download="Rajmanna-cv.pdf"
+              class="downloadButton bg-[#8ecae6] rounded-full text-2xl flex items-center font-bold px-10 py-4 drop-shadow-[0_0_0.75rem_rgba(142,202,230,0.75)] hover:bg-[#77aec7]"
+            >
+              <p class="drop-shadow-md">Download cv</p>
+            </a>
+            <a
+              href="#portfolio"
+              class="myWorkButton flex items-center rounded-full text-2xl font-bold px-10 py-4 border-2 border-[#8ecae6] hover:bg-[#77aec7]"
+            >
+              <p class="mr-3">See my work</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-move-right"
+              >
+                <path d="M18 8L22 12L18 16" />
+                <path d="M2 12H22" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="characterImage max-md:mb-10 max-md:mt-16">
+          <img
+            src="/assets/programmer-C5MtvQ_R.webp"
+            alt="A man wearing a headphone and using his laptop"
+            class="mr-16 programmerImage glow drop-shadow-[0_0_0.75rem_rgba(142,202,230,0.75)] hover:drop-shadow-[0_0_1rem_rgba(142,202,230,0.75)] max-md:w-[250px] max-md:mx-auto"
+          />
+        </div>
+      </section>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section
+      class="servicesPage px-44 h-[100vh] pt-28 max-md:px-5"
+      id="services"
+    >
+      <h2
+        class="servicesText text-center text-[3.5rem] font-bold text-[#8ecae6]"
+      >
+        Services & Skills.
+      </h2>
+      <div class="grid grid-cols-3 gap-10 my-20 text-white max-md:grid-cols-2">
+        <div class="service flex items-center h-24 bg-[#8ecae6] rounded-lg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-panels-top-left mx-10"
+          >
+            <rect width="18" height="18" x="3" y="3" rx="2" />
+            <path d="M3 9h18" />
+            <path d="M9 21V9" />
+          </svg>
+          <p class="text-2xl font-semibold drop-shadow-md">Python Automation</p>
+        </div>
+        <div class="service flex items-center h-24 bg-[#8ecae6] rounded-lg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-panels-top-left mx-10"
+          >
+            <rect width="18" height="18" x="3" y="3" rx="2" />
+            <path d="M3 9h18" />
+            <path d="M9 21V9" />
+          </svg>
+          <p class="text-2xl font-semibold drop-shadow-md">UI/UX Designing</p>
+        </div>
+        <div class="service flex items-center h-24 bg-[#8ecae6] rounded-lg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-panels-top-left mx-10"
+          >
+            <rect width="18" height="18" x="3" y="3" rx="2" />
+            <path d="M3 9h18" />
+            <path d="M9 21V9" />
+          </svg>
+          <p class="text-2xl font-semibold drop-shadow-md">Web Development</p>
+        </div>
+        <div class="service flex items-center h-24 bg-[#8ecae6] rounded-lg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-panels-top-left mx-10"
+          >
+            <rect width="18" height="18" x="3" y="3" rx="2" />
+            <path d="M3 9h18" />
+            <path d="M9 21V9" />
+          </svg>
+          <p class="text-2xl font-semibold drop-shadow-md">DevOps Solutions</p>
+        </div>
+        <div class="service flex items-center h-24 bg-[#8ecae6] rounded-lg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-panels-top-left mx-10"
+          >
+            <rect width="18" height="18" x="3" y="3" rx="2" />
+            <path d="M3 9h18" />
+            <path d="M9 21V9" />
+          </svg>
+          <p class="text-2xl font-semibold drop-shadow-md">
+            Wordpress Development
+          </p>
+        </div>
+        <div class="service flex items-center h-24 bg-[#8ecae6] rounded-lg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-panels-top-left mx-10"
+          >
+            <rect width="18" height="18" x="3" y="3" rx="2" />
+            <path d="M3 9h18" />
+            <path d="M9 21V9" />
+          </svg>
+          <p class="text-2xl font-semibold drop-shadow-md">
+            Database Management
+          </p>
+        </div>
+        <div class="skill flex items-center h-28 bg-[#8ecae6] rounded-lg">
+          <img src="/assets/javascript-JvtvchrN.png" alt="javascript logo" class="ml-5" />
+          <img src="/assets/python-BtoxI6Jt.png" alt="python logo" class="ml-5" />
+          <img src="/assets/php-D_U4Qr9c.png" alt="core php logo" class="mx-5" />
+          <p class="text-2xl font-semibold drop-shadow-md">Languages</p>
+        </div>
+        <div class="skill flex items-center h-28 bg-[#8ecae6] rounded-lg">
+          <img src="/assets/react-DorzsOFg.png" alt="react.js logo" class="ml-5" />
+          <img src="/assets/nodejs-DdDC17PO.png" alt="node.js logo" class="ml-5" />
+          <img src="/assets/jquery-DuD9Fcvo.png" alt="jquery logo" class="mx-5" />
+          <p class="text-2xl font-semibold drop-shadow-md">JS Frameworks</p>
+        </div>
+        <div class="skill flex items-center h-28 bg-[#8ecae6] rounded-lg">
+          <img src="data:image/png;base64,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" alt="postgreSQL logo" class="ml-5" />
+          <img src="/assets/mysql-BexY-kfW.png" alt="mysql logo" class="ml-5" />
+          <img src="/assets/mongo-db-BCZQCunl.png" alt="mongoDB logo" class="mx-5" />
+          <p class="text-2xl font-semibold drop-shadow-md">Databases</p>
+        </div>
+        <div class="skill flex items-center h-28 bg-[#8ecae6] rounded-lg">
+          <img src="/assets/bootstrap-DyYtM_km.png" alt="bootstrap logo" class="ml-5" />
+          <img src="/assets/tailwind-8yelA8FN.png" alt="tailwind css logo" class="mx-5" />
+          <p class="text-2xl font-semibold drop-shadow-md">CSS Frameworks</p>
+        </div>
+        <div class="skill flex items-center h-28 bg-[#8ecae6] rounded-lg">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAKNklEQVR4nO2de4xdRR3HP1u14gPxgRqjYqJGfATFmOArJj7RVHkYXDEFAYG0WKgVFDFEc42KtEqF4nbvmXvmblu2vJbQP4iJjxDEB4kPRIkiMaRaIrbFAC1YVNq9e8zMOXPnnL3t9u6ZOeeec7m/5Je7abZzfzPz/f3mN7/HLIxoRCMa0YhGNKKhpTGiIeDaUq2FH4Z5zLCU9byYSV5UWxYcRYMl1IpmeIb+FFyBYBbBIwj21IpbPJb6+V16PrXYCCPkRt6E5HHaRLSYIySqHbeYZSsRkpsyc6s0GSFDNnEdEQEHCJirJQs6+jPkAJJ3Z+ZXSTLCCd6D5ACCCKEnEtWWA2Y1kNrcmJljpb2FkB+yJRF+0AsonDkGkNKCkBOquwnm4G1xClNa8E7t0S/maYFE6DlG1duAGPkNjiDkd2zSQncqsXjCywYYJ+IRJK+p3t3Aov/CITI9UY8WTGvP6LLMnAdOBgmTvAzJg0gt8PCgX3S5o02r5M/M8Jxk9mNVQv+Vids5fOgXqU3YrDfhtMzcB0bGG2jyZn3paiX2cvALFRXCClzxBvyoGueA2QDJ9NMA/VG1XFJ7430/sutyDi/6RY9LOjlIMzTW5Ta3a7UcfvRHyQbMaUejxb9o8srBmCKz65IzksV39Xo6egPL5TkPWnBJZj1KIbPb6zgSyX2pW29+RIXM6QltKZGlDri5uqR/ZBNHZNalRLfzMn0xcTE9QaLOIf8kYCuCmxHcVDCr75hG8oD+7vya0NE3/hafzKxLoWR2WV3HJbv19dxNlTsajSFnlzYJ8x0hJzlprwJerEm3ZdamUBrvCj+h0S+6Ied8i79ZT+BOPa7yqsxnGRzP4w6HM8y4pPuRvL14l9QK/Q4k/3W8dM1pju3wh4oX/pAp05O1FuSdh4kPhVyTGbcQMgvU5lbngJv1Im7IjF0+jRHy89xaYM+wnYS8vDhTZA/eT3jxepT2hDxBi7cMbAOsK32q81kQg2l1Zlzv1GApIb92jvXbFN/aYgXukyJHLTDekORuBM8q0mtY6SHW39Eq22YH1xSpsoucm3IlNzll8eJ7QcBJmXGdySyO4Ggk23WJifCA/pCL/ArqTEuQ/DJ3SMW4pCHb/JpUs0BtvuXh0mVU9bc6dVmVhIb1iE5LaUG+c03yH6Y4zs8mmAFavAHJY86XLqOmKmmfnvjgKQaBuoOE3OWkBQqkbb7rZ3421j/lHOsfyK0xl0c0njgZcbBucTybJO4fpM1L3eZp0f8+Qr3wLrH++P9J/kdz0EmMPrSgzV0acKosMX8p4yo3LbAxn596uXTFt8UJN6FKPAsCnkLo4ty9i+KAR3UppuCO1Mhjed3O0z34/HE9TZvdCI6ppPmZTw2eyfUcrc1IXlYVImqcHGTczuciudfDrde4nV+tNPqzNECA2IvJJR6S7LaORnJkLdBvaCBtTeY/qTyn5CHHZIUNN4csrxH6B0jW9l/t4dJlboa3e5OvwRIto7KtZfDPCuLoYEC0sf63InnSOdavcq2qVEWVrKTHz0PjSZJmqMleuma8XLri8OzmzNguGThFyrto8hEEn0GwXHOLMwg4E8FnNTc5C8HZNDmnywGfY5JzaXKeZsH5mgNWaBas1NziAs2CVZoDLtQsuIiA1bRYjeALCNZoDvgigov75vj3v6zlSc+rW+seskwH29zsvomJ7EFyrNMGjCdCNnkbghsI2KNd2k0p3twHH6oq4rpD8PRheGtOnmaWbVqma9Prbur6lyL5jZdYv/qyFt92Ongb3ZrTryDZn7iy6b4tf/VBcV67fw5ycJP9en1CdtHiVXaONgayykusP9ag7Tp8He/ymMPir002c7bb6FfX0kdrlq/sBaZS9S0e0K/QoVS0mbTx5LkJziSCKTupBI5RV+9eAxMNkDzcGw2wrufFHg7f+ItUDEWFsNNo7oeiRKirdBhgh3Pypypsw9RX9KI/yvR23ePlDFBfJtmSjN//BjQSjZFckEJ/NBToD3mYKV6dRb/v6oCY44NS1fu0+GDvji+4AUv0Z8jNQ9NrYG3/dxZeCzv5bR5MkUk9/mIR58BY9yeRdFkOj+3fzcZDoX/+BrQ4njb7nFuN1CbEruOKPrVgbAg3wJjjPl1ya4quco4FGZdU8ncdG19w94fQBJmKOYV+4/cf1iU3v6DqddTCud+KDQLW9YWAxhAdwotGvyHrlq7wkIo0YYl9OpyQRvlCABDaDVWJ7ViTBr2Yhdr+hdAo+ZVz75ethri1L0FmugmhcxItmK3dJtiO+m9m5pQjOf3hVFLGvR5IcnJfAjUSLQlY1w1FxDGYfuSYc2A/6I+rpXe5NfD57P+1bunvWd9ni3+juwmXEvJUJhjXG0ybTWnKwXnhR5nmCvD7G32B7bALMMmxXqri8nQVjnfN0fEE3KjD0TIVTp4fdk6HqadS3J7Hch6rjW15OPCt5/MQgle458BtXejXvcSJYuF2Lao8ZTy1UcqdVQmZJp8m4HT92eRTuo5HsapwFpxKk1N054vqAVP9DIKP02QZEywj4GO0+CiCE/VYk/rndyK4zct5F3s+X8usX26yXslRSO73VqJiOszH+xSwqJRkughBsMu5YzIG2D/8dspYt3S5h3C1KVHcT8h7c0VLD5aUV/+Wj5fqcSXf14e9nzTs5Zl180SmTPHHXsoUlaq3+Ulm7LLJ9ru9FsmjTmecMa8qhN7vrT+XsOrxUoXeNJrdeoOXD6xeyJ5v6z0WIRT4kpaNE016rJi7n6t5YemaYAA1wes9eHhxzCtkBz/gJcVV/5lB1dVastND1dxs4tt/o3QtsGDa4KUALS5lv7T4eVjB13hLX0r2Opev5O/62esF/ZK/6QfKS6h9tenLtoenKYOu7ZzW46oWz/wezeI8n5Brvdn+kC+Vp8W2asHtoYu0Jki9CScWPgn7rPIbCZ3ftzPof0A/cV9q5beNE93ixRS1NYq2J8/V3IJgpiBWY19PyN1ech2x9q4p35OzSDoOyb89pC/ndBJ/eoFyQV+svmOqG4SLHNH/Vx0lGOiTZSFrPaQvo1KfLHM3myW9DbEQpbNXynzUNXslcqK/zV/YwAsya1E6Wbf03KF9L1ocAv1tPp9ZgwGRcUvVOwt3Pg2eruwkN/j7mOD5mTUYGNkD+QOpx1uHF/1btMe2slo9b/YduXbt63nEYdAf8ie+x/OSmVek49Nqwev0Hzhwf9QjqjD6z68W+nvLSS4fQi3oJLb/Xt3AXin0W4oFUq6ZUlMfYQpRMfS3OK+a6O+tJzJPvnSGyPbf032iuILot2QuJe0h+TNWQZK9a3FWtdHfW+F8gn4fqN5/UaOjNVmhfwPPrj76e+NEG2v9pwybSQHBVInvWnshW+Z+jC7EilFk4v514U4ScPtD+c/T+z2QVVv/kwh2InSbZl14F4J9hJyZmU/tSKUAVcOHqpepI4siXsItl2qktgehWpmdIl+figbEIxrRiEY0ohGNiKGk/wMpYo2twdiV1QAAAABJRU5ErkJggg==" alt="nginx logo" class="ml-5" />
+          <img src="/assets/docker--u1EFueM.png" alt="docker logo" class="mx-5" />
+          <p class="text-2xl font-semibold drop-shadow-md">DevOps Tools</p>
+        </div>
+        <div class="skill flex items-center h-28 bg-[#8ecae6] rounded-lg">
+          <img src="/assets/wordpress-QSW_oNJb.png" alt="wordpress logo" class="mx-5" />
+          <p class="text-2xl font-semibold drop-shadow-md">No Code</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section
+      class="portfolioPage px-44 flex flex-col items-center h-[100vh] pt-28 max-md:px-5 max-md:pt-0 max-md:mt-28"
+      id="portfolio"
+    >
+      <h2
+        class="portfolioText text-[3.5rem] max-md:mt-20 text-center font-bold text-[#8ecae6]"
+      >
+        Portfolios.
+      </h2>
+      <div class="grid grid-cols-3 mt-20 gap-5 max-md:grid-cols-2">
+        <div class="portfolio bg-[url(src/portfolio1.jpg)]">
+          <div class="overlay h-full w-full hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-search"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+            <h3 class="text-2xl font-bold mt-6 mb-3">Web Scraping Bot</h3>
+            <p class="text-xl font-semibold">
+              A flask app with automated scraping bot.
+            </p>
+            <a
+              href="https://github.com/rajmanna-dev/mmc-noticebot-opensource"
+              target="_blank"
+              class="mt-5 text-lg underline font-medium"
+              >Github</a
+            >
+          </div>
+        </div>
+        <div class="portfolio bg-[url(src/portfolio2.jpg)]">
+          <div class="overlay h-full w-full hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-search"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+            <h3 class="text-2xl font-bold mt-6 mb-3">Forum Website</h3>
+            <p class="text-xl font-semibold">Forum website using Core PHP.</p>
+            <a
+              href="https://github.com/rajmanna-dev/iDiscuss-forum"
+              target="_blank"
+              class="mt-5 text-lg underline font-medium"
+              >Github</a
+            >
+          </div>
+        </div>
+        <div class="portfolio bg-[url(src/portfolio3.jpg)]">
+          <div class="overlay h-full w-full hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-search"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+            <h3 class="text-2xl font-bold mt-6 mb-3">Dice Game</h3>
+            <p class="text-xl font-semibold">Dual Player Dice Game.</p>
+            <a
+              href="https://github.com/rajmanna-dev/pig-game"
+              target="_blank"
+              class="mt-5 text-lg underline font-medium"
+              >Github</a
+            >
+          </div>
+        </div>
+        <div class="portfolio bg-[url(src/portfolio4.jpg)]">
+          <div class="overlay h-full w-full hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-search"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+            <h3 class="text-2xl font-bold mt-6 mb-3">BG Remover</h3>
+            <p class="text-xl font-semibold">Background remover flask app.</p>
+            <a
+              href="https://github.com/rajmanna-dev/picturest"
+              target="_blank"
+              class="mt-5 text-lg underline font-medium"
+              >Github (Ongoing)</a
+            >
+          </div>
+        </div>
+        <div class="portfolio bg-[url(src/portfolio5.jpg)]">
+          <div class="overlay h-full w-full hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-search"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+            <h3 class="text-2xl font-bold mt-6 mb-3">Other Portfolio</h3>
+            <p class="text-xl font-semibold">Static portfolio site.</p>
+            <a
+              href="https://rajdev.vercel.app"
+              target="_blank"
+              class="mt-5 text-lg underline font-medium"
+              >View</a
+            >
+          </div>
+        </div>
+        <div class="portfolio bg-[url(src/portfolio6.jpg)]">
+          <div class="overlay h-full w-full hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-search"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+            <h3 class="text-2xl font-bold mt-6 mb-3">QuizApp</h3>
+            <p class="text-xl font-semibold">Dynamic QuizApp using Core PHP.</p>
+            <a
+              href="https://github.com/rajmanna-dev/quizloft"
+              target="_blank"
+              class="mt-5 text-lg underline font-medium"
+              >Github (Ongoing)</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contactPage h-[100vh] pt-28" id="contact">
+      <h2
+        class="contactText text-[3.5rem] max-md:mt-20 text-center font-bold text-[#8ecae6]"
+      >
+        Contact Me.
+      </h2>
+      <div class="contactMeLinks h-1/2 flex items-center justify-center">
+        <ul class="contactList flex">
+          <li
+            class="rounded-full text-[#e8e8e8] border-2 p-5 mx-5 border-[#8ecae6] hover:scale-105 hover:text-[#8ecae6]"
+          >
+            <a href="mailto:wts.devs@yahoo.com"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-at-sign"
+              >
+                <circle cx="12" cy="12" r="4" />
+                <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" /></svg
+            ></a>
+          </li>
+          <li
+            class="rounded-full text-[#e8e8e8] border-2 p-5 mx-5 border-[#8ecae6] hover:scale-105 hover:text-[#8ecae6]"
+          >
+            <a href="https://www.instagram.com/rishirajm_dev/" target="_blank"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-instagram"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg
+            ></a>
+          </li>
+          <li
+            class="rounded-full text-[#e8e8e8] border-2 p-5 mx-5 border-[#8ecae6] hover:scale-105 hover:text-[#8ecae6]"
+          >
+            <a href="https://discord.com/invite/Xn9Sm6as" target="_blank"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-message-circle"
+              >
+                <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></svg
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+      <div
+        class="h-80 bg-[#0e0f31] text-white flex justify-between items-center px-44 max-md:px-5 max-md:flex-col max-md:justify-center"
+      >
+        <div class="footerLogo flex items-center max-md:mb-10">
+          <img
+            src="/assets/siteLogo-ByBT-rzm.png"
+            width="38"
+            class="mr-3"
+            alt="Main logo of my portfolio website"
+          />
+          <p class="myName text-[3.2rem] font-bold">RM.</p>
+        </div>
+        <div class="footerSocial text-[#8d99ae]">
+          <div class="grid grid-cols-2 gap-y-5 gap-x-10">
+            <div class="social">
+              <a
+                href="https://www.instagram.com/rishirajm_dev/"
+                target="_blank"
+                class="flex items-center"
+              >
+                <img
+                  src="data:image/png;base64,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"
+                  alt="instagram icon"
+                  class="w-16 mr-2"
+                />
+                <p class="text-2xl">@Rishirajm_dev</p>
+              </a>
+            </div>
+            <div class="social">
+              <a
+                href="https://x.com/Rishirajm_dev"
+                target="_blank"
+                class="flex items-center"
+              >
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADFklEQVR4nO1ZS0vjUBTOD5mBXJtWRFs3Yg10UVAXBd3YKl20C920iH9AsBTXbnzWhT9A+qCCoHRVsUW6bSmKdNOHC0E6pY74AB9nOGcmmaidcZrBJIscOIvc3LTfl3u+e74kHGeGGWaYYdiwWCxfeZ5P8Tz/nTEGWib/8z/3eJ7vVQ2eMfZNa+DsfbYQS9cE8M4bADz8yoQaApqXDftzOV13TUBv0OxNmgSYuQLMOCUkCAIUi0XoFIlE4p8Azc3NwdPTE2SzWfo9zTUwPj4O9/f38PLyAplMBg4ODqBcLhOJcDj812snJyfh9vaW5vf39+sn4mg0SoBXV1fp2OFwwMXFBbRaLXA6nR2vEUURLi8vKUVR1HcX6unpgaOjIyoFr9dLY9PT03Scy+XovHK+3W6H8/NzuLm5AY/HY4xtdGhoCJrNJtTrdRgYGKCx7e1tWplIJCLPs1qtkM/n4fHxEYLBoL4iZm8yFAoR4N3dXRlsqVSCu7s7GBsbo5VIJpM0Z2lpqWvwTItGJgGcn59/JXIU6traGp3b2tpSBZ5pQQB3k1qtRgIeHh6mseXlZXl73d/ff6cJZiQCmD6fjwR8fHxMYDFPTk5oqw0EAqrBMy29UCwWe1XrIyMjtCqNRkMWuaEJCIIAp6en8PDwQAJWijwejxufQF9fH5ydnVHZoIBtNltHkRuSgMViIVuB4NPpNAHe2NiQRV6tVl+JnBmNwM7ODoFeWVmRu/Tz8zP4/X46j91aKXJmJAKLi4sEHktFGlMKGG0Ejm1ubqpqaNxnEpidnaU7WygU5JqXUhKwREyy4tilR0dH9ScwMTFB1rhSqcDg4GDHOalUikgsLCzQsdvtlu201WrVjwCWCNriq6srcLlcH3bpdrstW2g0ehjr6+v6EMCmhNsl+p2pqakPAczMzFCZ4Urhw8/h4SE5U6UV14wA1jH6fdxhPnr6UqZks99GXWHFdRGxFsmZBJi5AqBpCfHGernbVqOBPb2Bs98ZV7MCvfhxwQDgm4IgfOH+4ytNAt/P61A213jnVYM3wwwzzOC0iB9GnyQ6otH+2wAAAABJRU5ErkJggg=="
+                  alt="twitter.png icon"
+                  class="w-16 mr-2"
+                />
+                <p class="text-2xl">@Rishirajm_dev</p>
+              </a>
+            </div>
+            <div class="social">
+              <a
+                href="https://www.facebook.com/rishirajm.dev"
+                target="_blank"
+                class="flex items-center"
+              >
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABUElEQVR4nO2ZzUrDQBDH82S7Vby1JTsoPpAieFBv0qMP4UyEQq03L4KWWh/Am4eASXupYEeiWL9o6W5jdgPzgzku+f/2m00UCYIgBE3DYKwArxTgRANxFaUAJwqor+KkvVZ4beiwqtB6URk8cO557+HhU4Ja1gLFtAlI4NJewODYe3CYV24tEEBo/l4ioEvoxc2dhI86Q767TznLpzyb8Q+CHoGN7YSvb554GTpkgePOcGn44AUGo5RrLZCPX/4E3ju55a3di5Xaexd4/b1imd/XxartvQvYThktAvA/vb6I52wa3gjYMBil9RY47z7WW+D07CE8AdmFQEaAZAppOYlJdiGWbRTkNspyEuu6XSVUyU+L6wlgZi8A1C/7QudcBnv2AnHS9h4cPqoB2IxcKH4u+A6vgPadwn9JUKt4n6/yuV0V3zLYc+55QRCEqCreAAESa+zxbT1rAAAAAElFTkSuQmCC"
+                  alt="facebook icon"
+                  class="w-16 mr-2"
+                />
+                <p class="text-2xl">@Rishirajm.dev</p>
+              </a>
+            </div>
+            <div class="social">
+              <a
+                href="https://discord.com/invite/Xn9Sm6as"
+                target="_blank"
+                class="flex items-center"
+              >
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADzUlEQVR4nO2ZW4gcVRCGj6J4wQuKvsQg3gVBEFSiKER88jXKgttVnSUBZ3eqZqKLV7ytFyTGF5EYFX0Qb6AJPikBiTt/zWxcFgk+eXtQEMVLJMmLgdzIjpzeWbPb27PbvdO9s4Pzw3nprj6nvq7Tdeqcdi4mUtzFYp+R2AFWa66GRor9LPg4ENwU93e+84InWDHdbYe5Pchx0vpQovMsuKfbDnKaJnYiKNduXgigqHXdOU0diU8TAOyfbjvGqaOAg0kAzV5qrg+g/Qg0+1Norv63HzEJTrKgQYKXWe2FxUoQEjvKao+TYBsJxv3K2jUAUvuTFY/QyPj1gdjDLAZWfM2CjyIYsTFSezCyUXuR1Laz4gtW+5EU73GlfvdgCZewoMJqv6wgAKZJ8VpQnrjID06C11lr95VK+851KcWCa1jrympbg0rtjmp191kseN6XCYUD+GV8bKx5OpXt1qEhnO06VKiN6wa32LUzYPZq4QCh4hZXkO7XvWvSfhfLAiC1KVewSGxnYQChICwaICzX1hcCQGKHs3yonYgVPxcBsHMlnPditVcKmELY5NooyueKHaRmpPZUqbTvzLiNv0ZiT/r1gtTe8M+4DqZRZoCgPHFV8nDN00gwOT9a2LbUWyXFV+0A/LpAakdyBMAf7QYbGsYVCfa/Luhf7LcFSWHLxOXt+iW1idwASGzPEtNn3kkGqX2bAPBDDHJ6YHTy4nb9suKt/ADUtrcbKHpbYm/OmT4nSTC4wKYCjgq/tH0qHsoxAnh0scH8dxCW7V4WPM1SW9fOKlS73duQ2gb/jFsUwDbkCFAfjtvnUQfNKikj+Wo1N4BALUiuKG1rJ7VRoHYjqT1LVayN3/P95pmFagOjk+ckvTlSfNjaB4xStXHDUlODK/UrQ8UIq+0iwTM+ZcZtBkp7LmztHXJcyASNTdXGpUlO+XTo77fsDraAdpPa+6z2dlSg+fuC31v97UpyfDYqLPhuKX9cZoCZdHqAK/ZYPP35TQkLjqXpYyYD4bhfbV1L0f5iBLeR2rtpNzXLAjgVDTvhV1+fPv0cZrG/Mj0/k9n+ZrEPWlvRQ1mf7wxgFTTXB9B+BJr9KTRXWc5kVkNzcZHYT911Cp8k7RkyZCG81E0AUpvaOPzlZST4ZnkRqE5dkGYJLzAC0/5ga0Bwnv9PnRngv+IsOljqzr9iapXt68dwBou9kxngVDSw1h/YslppJVs4pz6K/FA8tyyA1aRA8EDSeanrJYWCO6Pir1cBvDZWx68mxfc9C+Ccc5s37z2f1T7vWQCvKEMpdsxe+BeXifnSQ2WAqQAAAABJRU5ErkJggg=="
+                  alt="discord icon"
+                  class="w-16 mr-2"
+                />
+                <p class="text-2xl">@Rishirajm_dev</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
