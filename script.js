@@ -14,6 +14,7 @@ $(document).ready(function () {
     if (this.hash !== '') {
       event.preventDefault();
       let hash = this.hash;
+
       $('html, body').animate(
         {
           scrollTop: $(hash).offset().top,
