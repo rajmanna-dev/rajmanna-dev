@@ -6,7 +6,7 @@ $(document).ready(function () {
       $('nav').css('background-color', '');
     }
   });
-  $('a').on('click', function (e) {
+  $('.navLink').on('click', function (e) {
     e.preventDefault();
     var targetId = $(this).attr('href');
     var targetPosition = $(targetId).offset().top;
